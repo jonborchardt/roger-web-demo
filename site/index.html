@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roger — high-res art for classic SCI adventures</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <img src="img/logo.svg" alt="Roger">
+  <a href="index.html">What is Roger</a>
+  <a href="comparisons.html">Comparisons</a>
+  <a href="upstreaming.html">Upstreaming</a>
+  <span class="spacer"></span>
+  <a href="betrayed-alliance/">▶ Play</a>
+</nav>
+
+<header class="hero wrap">
+  <h1>Roger</h1>
+  <p class="lead">High-resolution art for classic Sierra SCI adventure games —
+    generated in-engine from the original game resources, with the game logic
+    left completely untouched.</p>
+  <a class="btn" href="betrayed-alliance/">▶ Play the live demo</a>
+</header>
+
+<main class="wrap">
+  <div class="card">
+    <h2>What it is</h2>
+    <p>Roger is a display-layer enhancement inside ScummVM's SCI engine. It runs
+      the original commercial games from their original data and re-renders the
+      backgrounds and sprites at high resolution, while all game logic still runs
+      at the native 320×200 resolution. It is opt-in and, when switched off, the
+      engine behaves byte-for-byte like stock ScummVM.</p>
+  </div>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <p>Each room's native picture, priority, and control buffers render exactly as
+      SCI always does — so walkability and occlusion "just work." Roger then
+      generates a high-resolution plate from the same SCI resources (an in-engine
+      upscaling pipeline) and composites it, plus upscaled sprites and the game's
+      dialogs, through ScummVM's OSystem overlay. Nothing is pre-shipped as art;
+      it's all derived from the game's own resources at run time.</p>
+    <p>Press <strong>F10</strong> in the demo to cycle
+      <em>Enhanced → Original → Side-by-Side</em> and compare for yourself.</p>
+  </div>
+
+  <div class="card">
+    <h2>See it</h2>
+    <p><a href="comparisons.html">Before / after comparisons →</a></p>
+    <p><a href="betrayed-alliance/">Play Betrayed Alliance Book 1 in your browser →</a></p>
+    <p><a href="upstreaming.html">Why and how we want to bring this to ScummVM →</a></p>
+  </div>
+</main>
+
+<footer class="wrap">
+  Roger is a downstream ScummVM fork. Engine: ScummVM (GPLv3+). Demo game:
+  Betrayed Alliance Book 1 © Ryan Slattery / Slattstudio (MIT). An independent
+  showcase, not affiliated with Slattstudio or ScummVM.
+</footer>
+</body>
+</html>
