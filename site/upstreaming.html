@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roger — bringing it to ScummVM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <img src="img/logo.svg" alt="Roger">
+  <a href="index.html">What is Roger</a>
+  <a href="comparisons.html">Comparisons</a>
+  <a href="upstreaming.html">Upstreaming</a>
+  <span class="spacer"></span>
+  <a href="betrayed-alliance/">▶ Play</a>
+</nav>
+
+<main class="wrap">
+  <h1>Bringing Roger to ScummVM</h1>
+
+  <div class="card">
+    <h2>Why</h2>
+    <p>Roger runs original commercial games from their original data and enhances
+      only how they are displayed. It is <strong>opt-in</strong> and
+      <strong>byte-identical to stock ScummVM when disabled</strong>. It is
+      <em>not</em> a new engine, a reimplementation, or a private game — it is a
+      display-layer provider inside the existing SCI engine. Game detection stays
+      SCI's; no new detection tables, no metaengine, no duplicated engine.</p>
+    <p>That shape makes it a low-risk addition: players who want the enhancement
+      turn it on; everyone else is unaffected.</p>
+  </div>
+
+  <div class="card">
+    <h2>How</h2>
+    <p>All SCI graphics chokepoints call a single neutral, engine-owned observer
+      interface. Roger lives entirely behind that seam — the fork's changes
+      outside <code>engines/sci/roger/</code> contain zero Roger references and
+      are byte-identical to stock when the observer is null. This keeps the
+      maintained diff small and the change reviewable.</p>
+    <p>The plan is to talk first (ScummVM has a strong discuss-before-PR culture),
+      then submit one coherent engine-seam change as a few clean commits, plus
+      small separable PRs for the generic pieces (a headless scripted-input driver,
+      a page-relative data-fetch portability fix). Clean PR branches are built
+      fresh from upstream <code>master</code>; the fork itself remains a long-lived
+      showcase either way.</p>
+  </div>
+
+  <div class="card">
+    <h2>Try it first</h2>
+    <p>The <a href="betrayed-alliance/">live browser demo</a> is the fastest way to
+      see exactly what "display-only enhancement" means — press <strong>F10</strong>
+      to flip between Enhanced, Original, and Side-by-Side.</p>
+  </div>
+</main>
+
+<footer class="wrap">
+  <a href="index.html">← Back to overview</a>
+</footer>
+</body>
+</html>
