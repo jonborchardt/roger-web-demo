@@ -1,4 +1,4 @@
 Roger web demo build info
 source: https://github.com/jonborchardt/scummvm (branch jon-wasm)
-commit: fa5ec26cdc197641d72d13e851d5d23e6a624bcd
-assembled: 2026-07-14T05:21:55Z
+commit: ec336ab06facd9adf56465c48d6c85b0e95ad390
+assembled: 2026-07-14T06:37:11Z
