@@ -5,7 +5,10 @@ Pages. It does not build anything. Read this before editing.
 
 ## What deploys
 `.github/workflows/deploy.yml` publishes the whole `site/` tree to GitHub Pages
-on every push to `main`. Live at https://jonborchardt.github.io/roger-web-demo/.
+on pushes to `main` that touch `site/**` (or the workflow file itself — paths
+filter added 2026-07-15; repo-root docs pushes like README/CLAUDE.md/COPYING no
+longer trigger a redeploy, and `workflow_dispatch` is the manual escape hatch).
+Live at https://jonborchardt.github.io/roger-web-demo/.
 
 ## Hand-authored here (safe to edit directly, then commit + push)
 - `site/index.html`, `site/comparisons.html`, `site/upstreaming.html`
