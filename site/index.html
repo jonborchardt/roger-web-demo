@@ -22,9 +22,53 @@
     generated in-engine from the original game resources, with the game logic
     left completely untouched.</p>
   <a class="btn" href="betrayed-alliance/">▶ Play the live demo</a>
+  <p style="margin-top:1.1em; padding:.7em 1em; border:1px solid #3a3428; border-radius:8px; background:rgba(200,162,74,0.08); font-size:.95em;">
+    📱 <strong>On a phone?</strong> Hold it in <strong>landscape</strong>, and switch your keyboard to
+    <strong>floating</strong> mode for comfortable typing — <a href="#mobile">read the mobile tips</a> before you start.
+    🖥️ <strong>On a computer?</strong> You can also <a href="#desktop">run it natively on Windows, macOS, or Linux</a>.
+  </p>
 </header>
 
 <main class="wrap">
+  <div class="card" id="mobile">
+    <h2>📱 Playing on a phone — read this first</h2>
+    <p>The demo runs on phones, but be warned it is <strong>not fully optimal</strong>:
+      Betrayed Alliance is a keyboard-and-parser adventure built for a desktop. Hold your
+      phone in <strong>landscape</strong>. A side action bar gives you the on-screen
+      keyboard plus <em>Menu&nbsp;(Esc)</em>, <em>Enhanced&nbsp;(F10)</em>, and a
+      <em>↑ ← ↓ →&nbsp;/&nbsp;OK</em> pad — the game's menu opens with <em>Menu</em> and
+      is navigated with those arrows. The game shrinks to stay visible above the keyboard.</p>
+    <p style="padding:.7em 1em; border-left:3px solid #c8a24a; background:rgba(200,162,74,0.08);">
+      <strong>The one tip that makes it comfortable: put your keyboard in floating mode.</strong>
+      The phone keyboard normally docks at the bottom and covers the text as you type. Most
+      Android keyboards (e.g. Gboard) can <strong>float</strong>: open the keyboard, tap the
+      <em>⋮</em> / toolbar menu, choose <strong>Floating</strong> (or <em>Modes → Floating</em>),
+      then drag it out of the way — like this:</p>
+    <p><img src="img/floating-keyboard.png"
+         alt="Betrayed Alliance running on a phone with the keyboard set to floating mode and moved aside"
+         style="max-width:100%;height:auto;border-radius:6px;"></p>
+  </div>
+
+  <div class="card" id="desktop">
+    <h2>🖥️ Run it on your own computer</h2>
+    <p>For the best experience — full keyboard and mouse — run the enhanced version
+      natively on <strong>Windows, macOS, or Linux</strong>. Roger is a fork of ScummVM,
+      so you build it from source:</p>
+    <p>➜ <a href="https://github.com/jonborchardt/scummvm" target="_blank" rel="noopener"><strong>github.com/jonborchardt/scummvm</strong></a>
+      (branch <code>jon-wasm</code>).</p>
+    <ul>
+      <li><strong>Windows:</strong> clone the repo and run <code>build_and_run.ps1</code>
+        — it fetches the libraries via vcpkg and builds with Visual Studio (Desktop C++
+        workload) on the first run.</li>
+      <li><strong>macOS / Linux:</strong> the standard ScummVM build —
+        <code>./configure &amp;&amp; make</code> — then launch the <code>scummvm</code> binary.</li>
+    </ul>
+    <p>Point it at a supported SCI0 EGA game (SQ3, QFG1 EGA) or Betrayed Alliance, which is
+      free. Roger is opt-in and, switched off, behaves byte-for-byte like stock ScummVM.</p>
+    <p><em>Note: ready-to-run downloads aren't published yet — for now it's a source build.
+      Pre-built binaries are on the to-do list.</em></p>
+  </div>
+
   <div class="card">
     <h2>What it is</h2>
     <p>Roger is a display-layer enhancement inside ScummVM's SCI engine. It runs
@@ -51,25 +95,6 @@
     <p><a href="comparisons.html">Before / after comparisons →</a></p>
     <p><a href="betrayed-alliance/">Play Betrayed Alliance Book 1 in your browser →</a></p>
     <p><a href="upstreaming.html">Why and how we want to bring this to ScummVM →</a></p>
-  </div>
-
-  <div class="card">
-    <h2>Playing on mobile</h2>
-    <p>The demo runs on phones — hold your device in <strong>landscape</strong>. Be
-      warned that the experience is not fully optimal: Betrayed Alliance is a
-      keyboard-and-parser adventure built for a desktop. A side action bar gives you
-      the on-screen keyboard plus <em>Menu</em>, <em>Enhanced&nbsp;(F10)</em>, and
-      arrow / OK buttons (the game's menu opens with <em>Menu</em> and is navigated
-      with the arrows), and the game shrinks to stay visible above the keyboard.</p>
-    <p><strong>Tip: use a floating keyboard.</strong> The phone keyboard normally
-      docks at the bottom and covers where you type. Most Android keyboards (e.g.
-      Gboard) have a <em>floating</em> mode you can drag aside: open the keyboard,
-      tap the <em>⋮</em> / toolbar menu, choose <em>Floating</em> (or
-      <em>Modes → Floating</em>), then move it out of the way. It makes typing
-      commands much more comfortable — as shown here:</p>
-    <p><img src="img/floating-keyboard.png"
-         alt="Betrayed Alliance running on a phone with the keyboard set to floating mode and moved aside"
-         style="max-width:100%;height:auto;border-radius:6px;"></p>
   </div>
 </main>
 
